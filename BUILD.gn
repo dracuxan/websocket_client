@@ -1,5 +1,5 @@
-executable("hello") {
+executable("main") {
   sources=[
-    "hello.cpp",
+    "src/main.cpp",
   ]
 }
