@@ -27,8 +27,12 @@ websocket_client/
 ## Questions encountered during the creation of this project
 
 1. GN vs Ninja?
+
    > GN is used to generate Ninja build files
+
    > Ninja is used to build the entire project
+
+2.
 
 ## References:
 
