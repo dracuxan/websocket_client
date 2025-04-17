@@ -24,7 +24,21 @@ websocket_client/
 └── README.md                     # Project description and build instructions
 ```
 
-## Questions encountered during the creation of this project
+## Build and Run Commands
+
+```bash
+make build
+```
+
+builds the project by running `gn gen out` and `ninja -C out`.
+
+```bash
+make run
+```
+
+runs the project using binary in `out` directory.
+
+## A bit of theory
 
 1. GN vs Ninja?
    > GN is used to generate Ninja build files. Ninja is used to build the entire project.
