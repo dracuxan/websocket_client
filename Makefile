@@ -1,13 +1,13 @@
-.PHONY: all build run test
-
-all: build run
+.PHONY: build clean test
 
 build:
-	echo "Generating Ninja..."
+	@echo "Generating Ninja..."
 	@gn gen out
 
-	echo "Building Project..."
+	@echo "Building Project..."
 	@ninja -C out
 
-run:
-	@./out/main
+clean:
+	@echo "Cleaning build artifacts..."
+	@rm -rf out
+

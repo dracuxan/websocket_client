@@ -1,5 +1,8 @@
 executable("main") {
-  sources=[
+  sources = [
     "src/main.cpp",
+  ]
+  include_dirs = [
+    "include",  # For websocketpp headers
   ]
 }
