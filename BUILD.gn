@@ -1,8 +1,28 @@
+# Common configuration
+config("websocketpp_config") {
+  include_dirs = [ "include/" ]
+}
+
+# Compiler configuration
+config("compiler_defaults") {
+  cflags = [ "-O2", "-Wall" ]
+}
+
+# Define our main executable
 executable("main") {
   sources = [
     "src/main.cpp",
+    "src/websocket_endpoint.cpp",
+    "src/connection_metadata.cpp",
+    "src/command_parser.cpp",
   ]
-  include_dirs = [
-    "include",  # For websocketpp headers
+  public_configs = [ 
+    ":websocketpp_config",
+    ":compiler_defaults",
   ]
+  
+  # Libraries
+  libs = [ "ssl", "crypto", "boost_system", "pthread" ]
 }
+
+

@@ -11,3 +11,5 @@ clean:
 	@echo "Cleaning build artifacts..."
 	@rm -rf out
 
+run:
+	./out/main
