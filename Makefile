@@ -1,5 +1,7 @@
 .PHONY: build clean test
 
+all: build
+
 build:
 	@echo "Generating Ninja..."
 	@gn gen out
