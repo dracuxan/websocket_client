@@ -4,24 +4,25 @@
 
 ```
 websocket_client/
-├── src/
-│   ├── websocket_client.h        # WebSocket connection logic (header)
-│   ├── websocket_client.cpp      # WebSocket connection logic (implementation)
-│   ├── message_handler.h         # Message sending/receiving logic (header)
-│   ├── message_handler.cpp       # Message sending/receiving logic (implementation)
-│   ├── cli.h                     # Command-line interface (header)
-│   ├── cli.cpp                   # Command-line interface (implementation)
-│   └── main.cpp                  # Main entry point
-├── tests/
-│   ├── websocket_client_test.cpp # Unit tests for WebSocket client
-│   ├── message_handler_test.cpp  # Unit tests for message handler
-│   └── test_main.cpp             # Test framework entry point
 ├── build/
-│   └── BUILD.gn                  # GN build configuration
+│   ├── BUILDCONFIG.gn           # GN build system configuration
+│   ├── BUILD.gn                 # GN build rules for the build directory
+│   └── toolchain/               # Toolchain configuration files
+├── BUILD.gn                     # Root GN build configuration file
+├── compile_flags.txt            # Compiler flags for tooling (e.g., clangd, code completion)
 ├── include/
-│   ├── CLI11.hpp                 # CLI11 library header
-│   └── websocketpp/              # WebSocket++ headers (folder)
-└── README.md                     # Project description and build instructions
+│   ├── CLI11.hpp                # CLI11 library header for command-line parsing
+│   └── websocketpp/             # WebSocket++ library headers
+├── Makefile                     # Makefile for building the project using Make
+├── README.md                    # Project overview and build/setup instructions
+└── src/
+    ├── command_parser.cpp       # Implementation of the command-line parser
+    ├── command_parser.hpp       # Header for command-line parsing logic
+    ├── connection_metadata.cpp  # Implementation for managing WebSocket connection metadata
+    ├── connection_metadata.hpp  # Header for connection metadata structures
+    ├── main.cpp                 # Main application entry point
+    ├── websocket_endpoint.cpp   # Implementation of WebSocket client connection
+    └── websocket_endpoint.hpp   # Header for WebSocket connection logic
 ```
 
 ## Build and Run Commands
